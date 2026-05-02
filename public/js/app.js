@@ -633,4 +633,4 @@ document.querySelectorAll('.win-btn.close').forEach(btn => {
   });
 });
 
-console.log('[MSN] Messenger client loaded');
+console.log('[Delta] Client loaded');

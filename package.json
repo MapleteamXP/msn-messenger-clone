@@ -1,7 +1,7 @@
 {
-  "name": "msn-messenger-clone",
+  "name": "delta-messenger",
   "version": "1.0.0",
-  "description": "A fully working MSN Messenger clone with real-time chat",
+  "description": "Delta Messenger - Real-time chat app with classic instant messenger feel",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",

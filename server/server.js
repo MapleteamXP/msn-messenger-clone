@@ -293,6 +293,6 @@ function notifyContactsStatus(userId, status) {
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`[MSN] Messenger Clone running on port ${PORT}`);
-  console.log(`[MSN] Open http://localhost:${PORT} in your browser`);
+  console.log(`[Delta] Messenger running on port ${PORT}`);
+  console.log(`[Delta] Open http://localhost:${PORT} in your browser`);
 });

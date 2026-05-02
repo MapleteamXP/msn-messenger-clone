@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: msn-messenger-clone
+    name: delta-messenger
     runtime: node
     buildCommand: npm install
     startCommand: node server/server.js

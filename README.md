@@ -1,6 +1,6 @@
-# MSN Messenger Clone
+# Delta Messenger
 
-A fully working, real-time MSN Messenger clone built with Node.js, Socket.io, and SQLite.
+A real-time chat app with that classic instant messenger feel — built with Node.js, Socket.io, and SQLite.
 
 ## Features
 
@@ -20,14 +20,11 @@ A fully working, real-time MSN Messenger clone built with Node.js, Socket.io, an
 ## Quick Start
 
 ```bash
-# Install dependencies
+# Clone and install
+git clone https://github.com/MapleteamXP/delta-messenger.git
+cd delta-messenger
 npm install
-
-# Start the server
 npm start
-
-# Or for development with auto-reload
-npm run dev
 ```
 
 Then open `http://localhost:3000` in your browser.
@@ -49,7 +46,7 @@ Free tunnels give you **random suspicious names** like `might-polo-measure-telep
 2. Click **"New +"** → **"Web Service"** → Select **`msn-messenger-clone`**
 3. Click **"Deploy"** — that's it!
 
-You get: `https://msn-messenger-clone.onrender.com` ← **Clean, professional, permanent!** 🔥
+You get: `https://delta-messenger.onrender.com` ← **Clean, professional, permanent!** 🔥
 
 ---
 
