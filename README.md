@@ -32,30 +32,27 @@ npm run dev
 
 Then open `http://localhost:3000` in your browser.
 
-## Deployment
+## 🚀 One-Click Deploy (FREE!)
 
-### Render / Railway / Heroku
-1. Push to GitHub
-2. Connect repo to platform
-3. Set `PORT` env var (or let platform auto-set)
-4. Deploy!
+The fastest way to get a **permanent, reliable URL** with zero Bad Gateway errors:
 
-### VPS / Self-hosted
-```bash
-git clone <repo-url>
-cd msn-messenger-clone
-npm install
-npm start
-# Runs on port 3000 by default
-```
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/MapleteamXP/msn-messenger-clone)
 
-### Using PM2 (production)
-```bash
-npm install -g pm2
-pm2 start server/server.js --name msn-messenger
-pm2 save
-pm2 startup
-```
+**Click that button ☝️ and you'll have a live MSN Messenger in 2 minutes!**
+
+---
+
+## Manual Deploy to Render (3 Steps)
+
+Don't want to use the button? Do it manually:
+
+1. Go to **[render.com](https://render.com)** → Sign up with your GitHub
+2. Click **"New Web Service"** → Select **`MapleteamXP/msn-messenger-clone`**
+3. Click **Deploy** — that's it! Render auto-detects Node.js and sets everything up.
+
+You'll get a permanent URL like `https://msn-messenger-clone.onrender.com` — no more Bad Gateway! 🔥
+
+---
 
 ## Tech Stack
 
