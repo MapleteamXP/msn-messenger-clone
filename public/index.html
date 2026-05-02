@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Windows Live Messenger</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ==================== LOGIN SCREEN ==================== -->
+<div id="loginScreen" class="screen active">
+  <div class="login-box">
+    <div class="login-header">
+      <div class="login-logo">Windows Live</div>
+      <div class="login-subtitle">Messenger</div>
+    </div>
+    
+    <div class="login-form">
+      <div class="tab-buttons">
+        <button id="tabLogin" class="tab-btn active">Sign In</button>
+        <button id="tabRegister" class="tab-btn">Get a new account</button>
+      </div>
+      
+      <!-- Sign In Form -->
+      <div id="signInForm" class="form-panel active">
+        <label>E-mail address:</label>
+        <input type="text" id="loginUsername" placeholder="username" autocomplete="off">
+        <label>Password:</label>
+        <input type="password" id="loginPassword" placeholder="password">
+        <label class="checkbox-label">
+          <input type="checkbox" id="rememberMe"> Remember me
+        </label>
+        <button id="btnSignIn" class="btn-signin">Sign In</button>
+        <div id="loginError" class="error-msg"></div>
+      </div>
+      
+      <!-- Register Form -->
+      <div id="registerForm" class="form-panel">
+        <label>Choose a username:</label>
+        <input type="text" id="regUsername" placeholder="username" autocomplete="off">
+        <label>Display name:</label>
+        <input type="text" id="regDisplayName" placeholder="Your display name">
+        <label>Password:</label>
+        <input type="password" id="regPassword" placeholder="password">
+        <button id="btnRegister" class="btn-signin">Create Account</button>
+        <div id="regError" class="error-msg"></div>
+      </div>
+    </div>
+    
+    <div class="login-footer">
+      <a href="#" onclick="alert('Not implemented in this demo')">Forgot your password?</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== MAIN WINDOW ==================== -->
+<div id="mainWindow" class="screen">
+  <div class="msn-window">
+    <!-- Title Bar -->
+    <div class="title-bar">
+      <div class="title-text">
+        <span id="myDisplayName">Display Name</span>
+        <span class="status-dot" id="myStatusDot"></span>
+      </div>
+      <div class="window-controls">
+        <button class="win-btn minimize">_</button>
+        <button class="win-btn maximize">□</button>
+        <button class="win-btn close">×</button>
+      </div>
+    </div>
+    
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+      <div class="menu-item">File</div>
+      <div class="menu-item">Contacts</div>
+      <div class="menu-item">Actions</div>
+      <div class="menu-item">Tools</div>
+      <div class="menu-item">Help</div>
+    </div>
+    
+    <!-- Content Area -->
+    <div class="window-body">
+      <!-- Left: Contact List -->
+      <div class="left-panel">
+        <div class="search-box">
+          <input type="text" id="searchContacts" placeholder="Search contacts...">
+        </div>
+        
+        <div class="my-status-bar">
+          <select id="statusSelector">
+            <option value="online">Online</option>
+            <option value="away">Away</option>
+            <option value="busy">Busy</option>
+            <option value="offline">Appear Offline</option>
+          </select>
+        </div>
+        
+        <div class="contacts-header">
+          <span>Online (</span><span id="onlineCount">0</span><span>)</span>
+        </div>
+        
+        <div id="contactsList" class="contacts-list">
+          <!-- Contacts populated by JS -->
+        </div>
+        
+        <div class="contacts-header offline-header">
+          <span>Offline (</span><span id="offlineCount">0</span><span>)</span>
+        </div>
+        
+        <div id="offlineContactsList" class="contacts-list offline-list">
+          <!-- Offline contacts -->
+        </div>
+        
+        <div class="bottom-actions">
+          <button id="btnAddContact" class="btn-small">Add a contact</button>
+          <button id="btnLogout" class="btn-small">Sign out</button>
+        </div>
+      </div>
+      
+      <!-- Right: Display Picture & Info -->
+      <div class="right-panel">
+        <div class="display-pic-area">
+          <div class="display-pic"></div>
+          <div class="display-name" id="profileDisplayName">Your Name</div>
+          <div class="personal-message" contenteditable="true" id="personalMessage">Type a personal message...</div>
+        </div>
+        
+        <div class="pending-section" id="pendingSection" style="display:none;">
+          <h4>Pending Requests</h4>
+          <div id="pendingList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CHAT WINDOWS CONTAINER ==================== -->
+<div id="chatWindows"></div>
+
+<!-- ==================== ADD CONTACT MODAL ==================== -->
+<div id="addContactModal" class="modal-overlay" style="display:none;">
+  <div class="modal-box">
+    <h3>Add a Contact</h3>
+    <p>Enter the username of the person you want to add:</p>
+    <input type="text" id="addContactInput" placeholder="username">
+    <div class="modal-buttons">
+      <button id="btnConfirmAdd" class="btn-primary">Add</button>
+      <button id="btnCancelAdd" class="btn-secondary">Cancel</button>
+    </div>
+    <div id="addContactError" class="error-msg"></div>
+  </div>
+</div>
+
+<!-- ==================== NOTIFICATION TOAST ==================== -->
+<div id="toastContainer"></div>
+
+<!-- ==================== AUDIO ==================== -->
+<audio id="sndMessage" preload="auto"></audio>
+<audio id="sndNudge" preload="auto"></audio>
+<audio id="sndLogin" preload="auto"></audio>
+
+<!-- Socket.IO -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
