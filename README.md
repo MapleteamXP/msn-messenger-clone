@@ -32,25 +32,24 @@ npm run dev
 
 Then open `http://localhost:3000` in your browser.
 
-## 🚀 One-Click Deploy (FREE!)
+## 🚀 Deploy to Render (FREE — CLEAN URL!)
 
-The fastest way to get a **permanent, reliable URL** with zero Bad Gateway errors:
+### Why Deploy?
+Free tunnels give you **random suspicious names** like `might-polo-measure-telephone.trycloudflare.com` — they look like malware! 😬
 
+**Render gives you a clean, professional URL:** `https://msn-messenger-clone.onrender.com`
+
+### Option A: One-Click Deploy (Easiest!)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/MapleteamXP/msn-messenger-clone)
 
-**Click that button ☝️ and you'll have a live MSN Messenger in 2 minutes!**
+**Click that button ☝️ — 2 minutes, clean URL, done!**
 
----
+### Option B: Manual (3 Steps)
+1. Go to **[render.com](https://render.com)** → Sign up with your **GitHub**
+2. Click **"New +"** → **"Web Service"** → Select **`msn-messenger-clone`**
+3. Click **"Deploy"** — that's it!
 
-## Manual Deploy to Render (3 Steps)
-
-Don't want to use the button? Do it manually:
-
-1. Go to **[render.com](https://render.com)** → Sign up with your GitHub
-2. Click **"New Web Service"** → Select **`MapleteamXP/msn-messenger-clone`**
-3. Click **Deploy** — that's it! Render auto-detects Node.js and sets everything up.
-
-You'll get a permanent URL like `https://msn-messenger-clone.onrender.com` — no more Bad Gateway! 🔥
+You get: `https://msn-messenger-clone.onrender.com` ← **Clean, professional, permanent!** 🔥
 
 ---
 
